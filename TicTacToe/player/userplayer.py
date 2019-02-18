@@ -24,4 +24,4 @@ class UserPlayer(Player):
 				print("User" + "_" + self.symbol + " won!")
 				self.game.flag = -1
 				self.game.show()
-				self.game.set_result(symbol)
+				self.game.set_result(self.symbol)

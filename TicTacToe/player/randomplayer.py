@@ -14,9 +14,10 @@ class RandomPlayer(Player):
 			self.game.flag -= 1
 			res = self.game.check(self.game.board, self.symbol, ai)
 			if res:
-				print("Random" + "_" + self.symbol + " won!")
+				if self.game.verbose:
+					print("Random" + "_" + self.symbol + " won!")
 				self.game.flag = -1
 				self.game.show()
-				self.game.set_result(symbol)
+				self.game.set_result(self.symbol)
 		else:
-			self.game.pick_random(self.symbol)
+			self.pick()

@@ -29,11 +29,12 @@ class RulePlayer(Player):
 							raise Exception
 		except:
 			self.game.board[temp] = self.symbol
-			print("Rule" + "_" + self.symbol + " won!")
+			if self.game.verbose:
+				print("Rule" + "_" + self.symbol + " won!")
 			self.game.flag = -1
 			self.game.show()
 			val = False
-			self.game.set_result(symbol)
+			self.game.set_result(self.symbol)
 		# Second, choose the one with 2 missing
 		if val and self.game.flag != -1:
 			try:
