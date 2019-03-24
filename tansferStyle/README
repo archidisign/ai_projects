@@ -1,0 +1,20 @@
+README
+
+train.py
+train.py trains the neural network such that it can transfer the style of one picture to another, creating a new picture.
+The code is inspired from the tutorial "How_to_do_style_transfer_in_tensorflow" (link).
+
+Example of command-line prompt:
+
+python3 train_test.py --in-path ./images/mcgill.jpg --out-path ./ --style-path ./images/canada.jpg --file-name result_canada --iterations-nbr 200
+
+
+Flags:
+
+--in-path: 		Path to file to transform.
+--out-path:		Destination (dir or file) of transformed file or files.
+--style-path:	File with style to use
+--file-name:		Name of file to be saved
+--iterations-nbr:	Number of iterations before output result
+
+Note: --in-path, --out-path, --style-path and --file-name are mandatory arguments.
